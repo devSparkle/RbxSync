@@ -1,13 +1,28 @@
 ﻿<Page
-    x:Class="RbxSync.MainPage"
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:RbxSync"
-    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d">
+	x:Class="RbxSync.MainPage"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:local="using:RbxSync"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="d" RequestedTheme="Dark">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
-    </Grid>
+	<Grid Background="#E74C3C">
+		<StackPanel HorizontalAlignment="Center" Height="250"
+					VerticalAlignment="Top" Width="200" Margin="0,100">
+			<TextBlock HorizontalAlignment="Center" TextAlignment="Center"
+					   FontSize="48" Height="72" Text="&lt;/&gt;" />
+			<TextBlock HorizontalAlignment="Center" TextAlignment="Center"
+					   FontSize="20" Height="24" Text="RbxSync"
+					   FontFamily="Segoe UI Light" />
+		</StackPanel>
+		
+		<Grid HorizontalAlignment="Center" Height="250" 
+			  VerticalAlignment="Bottom" Width="200" Margin="0,100">
+			<Button Content="Studio Plugin Path" Width="200"
+					VerticalAlignment="Bottom" />
+			<Button Content="Persistent Mode Path" Width="200" Margin="0, 0, 0, 42"
+					VerticalAlignment="Bottom" />
+		</Grid>
+	</Grid>
 </Page>

@@ -29,18 +29,23 @@ NotInheritable Class App
             Window.Current.Content = rootFrame
         End If
 
-        If e.PrelaunchActivated = False Then
-            If rootFrame.Content Is Nothing Then
-                ' When the navigation stack isn't restored navigate to the first page,
-                ' configuring the new page by passing required information as a navigation
-                ' parameter
-                rootFrame.Navigate(GetType(MainPage), e.Arguments)
-            End If
+		If e.PrelaunchActivated = False Then
+			If rootFrame.Content Is Nothing Then
+				' When the navigation stack isn't restored navigate to the first page,
+				' configuring the new page by passing required information as a navigation
+				' parameter
+				rootFrame.Navigate(GetType(MainPage), e.Arguments)
+			End If
 
-            ' Ensure the current window is active
-            Window.Current.Activate()
-        End If
-    End Sub
+			' Ensure the current window is active
+			Window.Current.Activate()
+		End If
+
+		ApplicationView.GetForCurrentView().SetPreferredMinSize(New Size(350, 400))
+
+		ApplicationView.PreferredLaunchViewSize = New Size(350, 400)
+		ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.PreferredLaunchViewSize
+	End Sub
 
     ''' <summary>
     ''' Invoked when Navigation to a certain page fails
