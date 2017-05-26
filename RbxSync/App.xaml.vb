@@ -40,11 +40,6 @@ NotInheritable Class App
 			' Ensure the current window is active
 			Window.Current.Activate()
 		End If
-
-		ApplicationView.GetForCurrentView().SetPreferredMinSize(New Size(350, 400))
-
-		ApplicationView.PreferredLaunchViewSize = New Size(350, 400)
-		ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.PreferredLaunchViewSize
 	End Sub
 
     ''' <summary>
