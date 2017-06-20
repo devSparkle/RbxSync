@@ -5,24 +5,26 @@
 	xmlns:local="using:RbxSync"
 	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
 	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-	mc:Ignorable="d" RequestedTheme="Dark">
+	mc:Ignorable="d" RequestedTheme="Dark" FontFamily="Wide Latin">
 
-	<Grid Background="#E74C3C">
-		<StackPanel HorizontalAlignment="Center" Height="250"
-					VerticalAlignment="Top" Width="200" Margin="0,100">
+	<Grid Background="{ThemeResource SystemAccentColor}">
+		<StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Width="200">
+			<Image Source="/Assets/Logo.png" Height="80" />
 			<TextBlock HorizontalAlignment="Center" TextAlignment="Center"
-					   FontSize="48" Height="72" Text="&lt;/&gt;" />
-			<TextBlock HorizontalAlignment="Center" TextAlignment="Center"
-					   FontSize="20" Height="24" Text="RbxSync"
-					   FontFamily="Segoe UI Light" />
+					   FontSize="24" Height="33" Width="200" Text="RbxSync"
+					   FontWeight="Light" FontFamily="Segoe UI" />
+
+
+			<StackPanel Margin="0, 40, 0, 0">
+				<Grid>
+					<Button Width="90" HorizontalAlignment="Left"
+							FontSize="32" Content="&#xE713;" HorizontalContentAlignment="Right"
+							Background="Transparent" FontFamily="Segoe MDL2 Assets" />
+					<Button Width="90" HorizontalAlignment="Right"
+							FontSize="32" Content="&#xE7E8;" HorizontalContentAlignment="Left"
+							Background="Transparent" FontFamily="Segoe MDL2 Assets" Margin="100, 0, 0, 0" />
+				</Grid>
+			</StackPanel>
 		</StackPanel>
-		
-		<Grid HorizontalAlignment="Center" Height="250" 
-			  VerticalAlignment="Bottom" Width="200" Margin="0,100">
-			<Button Content="Studio Plugin Path" Width="200"
-					VerticalAlignment="Bottom" />
-			<Button Content="Persistent Mode Path" Width="200" Margin="0, 0, 0, 42"
-					VerticalAlignment="Bottom" />
-		</Grid>
 	</Grid>
 </Page>
