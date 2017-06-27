@@ -3,6 +3,7 @@
 
 	Protected Overrides Sub OnLaunched(e As Windows.ApplicationModel.Activation.LaunchActivatedEventArgs)
 		Dim rootFrame As Frame = TryCast(Window.Current.Content, Frame)
+		Dim Socket As New SocketManager
 
 		If rootFrame Is Nothing Then
 			rootFrame = New Frame()
