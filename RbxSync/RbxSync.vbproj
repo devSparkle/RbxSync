@@ -107,7 +107,6 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
-    <Compile Include="SyncService\SocketManager.vb" />
     <Compile Include="SyncService\SyncController.vb" />
   </ItemGroup>
   <ItemGroup>

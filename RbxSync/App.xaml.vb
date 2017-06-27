@@ -3,7 +3,15 @@
 
 	Protected Overrides Sub OnLaunched(e As Windows.ApplicationModel.Activation.LaunchActivatedEventArgs)
 		Dim rootFrame As Frame = TryCast(Window.Current.Content, Frame)
-		Dim Socket As New SocketManager
+
+		Dim Server As New Catnap.Server.HttpServer(21496)
+		Server.restHandler.RegisterController(New SyncController)
+
+		Dim ServerTask = Windows.System.Threading.ThreadPool.RunAsync(
+			Sub(W)
+				Server.StartServer()
+			End Sub
+		)
 
 		If rootFrame Is Nothing Then
 			rootFrame = New Frame()
