@@ -10,7 +10,9 @@
 			AddHandler rootFrame.NavigationFailed, AddressOf OnNavigationFailed
 
 			If e.PreviousExecutionState = ApplicationExecutionState.Terminated Then
+
 			End If
+
 			Window.Current.Content = rootFrame
 		End If
 
